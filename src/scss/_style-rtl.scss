@@ -1,0 +1,141 @@
+
+table{
+	tbody{
+		tr{
+			td{
+				&.actions{
+					.btn, a{
+						margin-left: 8px;
+						
+						&:last-of-type{
+							margin-left: 0;
+						}
+						
+						&:not(.btn){
+							display: inline-block;
+							
+							i{
+								color: map-get($palette, base);
+								font-size: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+table.data-table{
+	margin: 0;
+	border-collapse: separate;
+	border-spacing: 0 7px;
+	
+	thead, tbody, tfoot{
+		border: none;
+	}
+	
+	thead, tfoot{
+		background-color: transparent;
+	}
+	
+	th, td{
+		color: map-get($palette, heading);
+		border-top: none;
+	}
+    
+	thead{
+		tr.filter{
+			td{
+				padding: 10px 0;
+			}
+		}
+		
+		tr.heading{
+			background-color: #f2f2f2;
+			
+			th{
+				padding: 15px;
+				text-align: center;
+				font-size: 16px;
+				font-weight: 700;
+				border-bottom: none;
+			}
+		}
+	}
+	
+	tbody{
+		tr{
+			@include box-shadow(0 0 2px 0 map-get($palette, base));
+			background-color: #FFFFFF;
+			-webkit-transition: background-color 0.5s;
+			-moz-transition: background-color 0.5s;
+			-o-transition: background-color 0.5s;
+			transition: background-color 0.5s;
+			
+			&:hover{
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				background-color: #f2f2f2;
+			}
+			
+			td{
+				text-align: center;
+				padding: 15px;
+			}
+		}
+	}
+	
+	tfoot{
+		td{
+			padding: 0;
+			
+			.list-pagination-wrapper{
+				margin: 0;
+			}
+
+		}
+	}
+}
+
+table.responsive-table{
+	@media screen and (max-width: map-get($breakpoints, medium) - 1px){
+		thead{
+			tr.heading{
+				border: none;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+		}
+		
+		tbody{
+			tr{
+				display: block;
+				width: 100%;
+				margin-bottom: 7px;
+				
+				td{
+					display: block;
+					border-bottom: 1px solid #d9d9d9;
+					text-align: left;
+					
+					&:last-child{
+						border-bottom: none;
+					}
+					
+					&::before{
+						content: attr(data-label);
+						float: right;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}
