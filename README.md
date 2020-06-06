@@ -48,18 +48,18 @@ module.exports = {
 let filter = {show: true, filterFields: FilterForm};
 let heading = {show: true, columns: ['Name', 'Email', 'Phone', 'Gender', '']};
 let dataModel = {
-	idProperty: "id",
-	fields: [
-		"name",
-		"email",
-		"phone",
-		"gender",
-		"actions"
-	]
+    idProperty: "id",
+    fields: [
+        "name",
+        "email",
+        "phone",
+        "gender",
+        "actions"
+    ]
 };
 let actions = {
-	'edit': this.edit,
-	'delete': this.delete,
+    'edit': this.edit,
+    'delete': this.delete,
 };
 
 ...
@@ -93,74 +93,74 @@ import 'react-data-table/dist/style.css';
 
 // this component renders the filtering fields
 class FilterForm extends React.Component{
-	render(){
-		return (
-			<div className="row">
-				<div className="col-12 col-md-4">
-					<input type="text" name="name" placeholder="Name" className="form-control" />
-				</div>
-				
-				<div className="col-12 col-md-4">
-					<input type="text" name="email" placeholder="Email" className="form-control" />
-				</div>
-				
-				<div className="col-12 col-md-4">
-					<button type="submit" className="btn">Search</button>&nbsp;&nbsp;
-					<button type="reset" className="btn">Reset</button>
-				</div>
-			</div>
-		);
-	}
+    render(){
+        return (
+            <div className="row">
+                <div className="col-12 col-md-4">
+                    <input type="text" name="name" placeholder="Name" className="form-control" />
+                </div>
+                
+                <div className="col-12 col-md-4">
+                    <input type="text" name="email" placeholder="Email" className="form-control" />
+                </div>
+                
+                <div className="col-12 col-md-4">
+                    <button type="submit" className="btn">Search</button>&nbsp;&nbsp;
+                    <button type="reset" className="btn">Reset</button>
+                </div>
+            </div>
+        );
+    }
 }
 
 
 class Table extends React.Component{
-	constructor(props){
-		super(props);
-		this.edit = this.edit.bind(this);
-		this.delete = this.delete.bind(this);
-	}
-	
-	render(){
-		// To show filters, filterFields is optional if show was set to false
-		let filter = {show: true, filterFields: FilterForm};
-		// Columns' names. columns is optional if show was set to false
-		let heading = {show: true, columns: ['Name', 'Email', 'Phone', 'Gender', '']};
-		// idProperty is to tell which is the ID property. This is used for actions (edit/delete...)
-		// fields array determines which data will be displayed.  
-		let dataModel = {
-			idProperty: "id",
-			fields: [
-				"name",
-				"email",
-				"phone",
-				"gender",
-				"actions"
-			]
-		};
-		/* Determine actions applied on a record. Here we define the action key 'edit' 
-		and which function is responsible for that action */
-		let actions = {
-			'edit': this.edit,
-			'delete': this.delete,
-		};
-		
-		return (
-			<div className="container" style={{marginTop: '40px'}}>
-				<DataTable filter={filter} heading={heading} actions={actions} dataSource="http://localhost/api_test/data.json" dataModel={dataModel} perPage="10" />
-			</div>
-		);
-	}
-	
-	/* As you see, this is the function which is dedicated for action 'edit'
-	ID of the record is passed. Here is where idProperty of the data model becomes handy */
-	edit(id){
-		window.alert('Editing record with ID: ' + id);
-	}
-	
-	delete(id){
-		window.alert('Deleting record with ID: ' + id);
-	}
+    constructor(props){
+        super(props);
+        this.edit = this.edit.bind(this);
+        this.delete = this.delete.bind(this);
+    }
+    
+    render(){
+        // To show filters, filterFields is optional if show was set to false
+        let filter = {show: true, filterFields: FilterForm};
+        // Columns' names. columns is optional if show was set to false
+        let heading = {show: true, columns: ['Name', 'Email', 'Phone', 'Gender', '']};
+        // idProperty is to tell which is the ID property. This is used for actions (edit/delete...)
+        // fields array determines which data will be displayed.  
+        let dataModel = {
+            idProperty: "id",
+            fields: [
+                "name",
+                "email",
+                "phone",
+                "gender",
+                "actions"
+            ]
+        };
+        /* Determine actions applied on a record. Here we define the action key 'edit' 
+        and which function is responsible for that action */
+        let actions = {
+            'edit': this.edit,
+            'delete': this.delete,
+        };
+        
+        return (
+            <div className="container" style={{marginTop: '40px'}}>
+                <DataTable filter={filter} heading={heading} actions={actions} dataSource="http://localhost/api_test/data.json" dataModel={dataModel} perPage="10" />
+            </div>
+        );
+    }
+    
+    /* As you see, this is the function which is dedicated for action 'edit'
+    ID of the record is passed. Here is where idProperty of the data model becomes handy */
+    edit(id){
+        window.alert('Editing record with ID: ' + id);
+    }
+    
+    delete(id){
+        window.alert('Deleting record with ID: ' + id);
+    }
 }
 
 export default Table;
@@ -190,7 +190,7 @@ As for server side implementation and response. Here's an example of the returne
         }
       ]
     },{
-	...
+    ...
 ```
 
 For pagination DataTable posts two parameters: length, start.
