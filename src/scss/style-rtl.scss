@@ -1,0 +1,11 @@
+@import "compass/css3";
+@import './settings.scss';
+@import './table-rtl.scss';
+@import './pagination-rtl.scss';
+
+.clear-fix::before, .clear-fix::after {
+	display: table;
+	content: ' ';
+	flex-basis: 0;
+	order: 1;
+}

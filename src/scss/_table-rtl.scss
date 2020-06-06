@@ -1,31 +1,4 @@
 
-table{
-	tbody{
-		tr{
-			td{
-				&.actions{
-					.btn, a{
-						margin-left: 8px;
-						
-						&:last-of-type{
-							margin-left: 0;
-						}
-						
-						&:not(.btn){
-							display: inline-block;
-							
-							i{
-								color: map-get($palette, base);
-								font-size: 16px;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 table.data-table{
 	margin: 0;
 	border-collapse: separate;
@@ -83,6 +56,16 @@ table.data-table{
 			td{
 				text-align: center;
 				padding: 15px;
+				
+				&.actions{
+					a{
+						margin-left: 8px;
+						
+						&:last-of-type{
+							margin-left: 0;
+						}
+					}
+				}
 			}
 		}
 	}
