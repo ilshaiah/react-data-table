@@ -201,7 +201,7 @@ $length = $_POST['length'];
 $start = $_POST['start'];
 ```
 
-Use DataTable with reference, so you can use these two methods:
+Use DataTable with reference, if you want to use any of these two methods:
 
 ```js
 reload()
