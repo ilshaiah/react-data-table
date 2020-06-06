@@ -187,7 +187,8 @@ var DataTable = /*#__PURE__*/function (_React$Component) {
           currentPage: this.state.currentPage,
           perPage: this.perPage,
           total: this.state.total,
-          recordsCount: this.state.data.length
+          recordsCount: this.state.data.length,
+          messages: this.messages
         }))));
       }
     }

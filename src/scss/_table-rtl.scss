@@ -12,9 +12,13 @@ table.data-table{
 		background-color: transparent;
 	}
 	
-	th, td{
-		color: map-get($palette, heading);
-		border-top: none;
+	> thead, > tbody, > tfoot{
+		> tr{
+			> th, > td{
+				color: map-get($palette, heading);
+				border-top: none;
+			}
+		}
 	}
     
 	thead{
@@ -77,7 +81,6 @@ table.data-table{
 			.list-pagination-wrapper{
 				margin: 0;
 			}
-
 		}
 	}
 }

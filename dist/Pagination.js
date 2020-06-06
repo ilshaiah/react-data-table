@@ -185,10 +185,10 @@ var Pagination = /*#__PURE__*/function (_React$Component) {
         }
 
         return /*#__PURE__*/_react["default"].createElement("nav", {
-          className: "list-pagination-wrapper clear-fix",
+          className: "table-pagination-wrapper",
           "aria-label": "Pagination"
         }, /*#__PURE__*/_react["default"].createElement("ul", {
-          className: "pagination"
+          className: "table-pagination"
         }, previous, items, next), /*#__PURE__*/_react["default"].createElement("div", {
           className: "pages-details-wrapper"
         }, /*#__PURE__*/_react["default"].createElement("div", {

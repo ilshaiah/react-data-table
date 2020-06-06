@@ -83,8 +83,8 @@ class Pagination extends React.Component{
 			}
 			
 			return (
-				<nav className="list-pagination-wrapper clear-fix" aria-label="Pagination">
-					<ul className="pagination">
+				<nav className="table-pagination-wrapper" aria-label="Pagination">
+					<ul className="table-pagination">
 						{previous}
 						
 						{items}

@@ -45,7 +45,7 @@ class BodyRow extends React.Component{
 			let label = (this.props.headings[i] !== undefined)? this.props.headings[i] : '';
 			
 			if('actions' == this.props.dataModel.fields[i]){
-				tds[tds.length] = <td key={this.props.dataModel.fields[i]} data-label={translations.front.actions} className="actions">
+				tds[tds.length] = <td key={this.props.dataModel.fields[i]} data-label="Actions" className="actions">
 					{this.renderRowActions(this.state.data[this.props.dataModel.fields[i]])}
 				</td>
 			} else{

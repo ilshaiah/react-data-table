@@ -2,10 +2,3 @@
 @import './settings.scss';
 @import './table.scss';
 @import './pagination.scss';
-
-.clear-fix::before, .clear-fix::after {
-	display: table;
-	content: ' ';
-	flex-basis: 0;
-	order: 1;
-}

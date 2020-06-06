@@ -94,7 +94,7 @@ var BodyRow = /*#__PURE__*/function (_React$Component) {
         if ('actions' == this.props.dataModel.fields[i]) {
           tds[tds.length] = /*#__PURE__*/_react["default"].createElement("td", {
             key: this.props.dataModel.fields[i],
-            "data-label": translations.front.actions,
+            "data-label": "Actions",
             className: "actions"
           }, this.renderRowActions(this.state.data[this.props.dataModel.fields[i]]));
         } else {

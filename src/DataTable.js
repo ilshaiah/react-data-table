@@ -120,7 +120,7 @@ class DataTable extends React.Component{
 				<tfoot>
 					<tr>
 						<td colSpan={this.columnsCount}>
-							<Pagination onPageRequest={this.changeCurrentPage} currentPage={this.state.currentPage} perPage={this.perPage} total={this.state.total} recordsCount={this.state.data.length} />
+							<Pagination onPageRequest={this.changeCurrentPage} currentPage={this.state.currentPage} perPage={this.perPage} total={this.state.total} recordsCount={this.state.data.length} messages={this.messages} />
 						</td>
 					</tr>
 				</tfoot>
