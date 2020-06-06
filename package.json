@@ -2,7 +2,7 @@
   "name": "react-data-table",
   "version": "1.0.0",
   "description": "React data table component",
-  "main": "dist/index.js",
+  "main": "dist/DataTable.js",
   "scripts": {
     "build": "babel src --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
