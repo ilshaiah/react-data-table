@@ -31,16 +31,16 @@
   },
   "homepage": "https://github.com/ilshaiah/react-data-table#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@babel/preset-react": "^7.9.4",
-    "babel-loader": "^8.1.0"
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2"
   },
   "dependencies": {
-    "jquery": "^3.5.0",
-    "react": "^16.13.1",
-    "react-router-dom": "^5.1.2"
+    "jquery": "^3.6.0",
+    "react": "^16.14.0",
+    "react-router-dom": "^5.2.0"
   },
   "files": [
     "dist"
